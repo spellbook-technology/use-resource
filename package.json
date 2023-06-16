@@ -1,0 +1,36 @@
+{
+  "name": "@spellbook-technology/use-resource",
+  "version": "0.0.1",
+  "description": "A React Hook to interact with RESTful APIs",
+  "main": "index.jsx",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/spellbook-technology/use-resource.git"
+  },
+  "author": "Daniel Dye <daniel@spellbook.tech>",
+  "license": "MIT",
+  "private": false,
+  "bugs": {
+    "url": "https://github.com/spellbook-technology/use-resource/issues"
+  },
+  "homepage": "https://github.com/spellbook-technology/use-resource#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "hook",
+    "api",
+    "rest",
+    "restful"
+  ],
+  "type": "module",
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
