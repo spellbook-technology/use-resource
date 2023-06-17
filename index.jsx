@@ -37,7 +37,7 @@ export const useResource = (path, { root } = {}) => {
   const [updating, setUpdating] = useState(false)
   const [destroying, setDestroying] = useState(false)
 
-  const fullPath = basePath + path
+  const fullPath = basePath ? basePath + path : path
 
   const resource = getCache(fullPath)
 
@@ -78,7 +78,7 @@ export const useCollection = (path, { root } = {}) => {
   const { getCache, setCache } = useContext(CacheContext)
   const [fetching, setFetching] = useState(false)
 
-  const fullPath = basePath + path
+  const fullPath = basePath ? basePath + path : path
 
   const collection = getCache(fullPath)
 
