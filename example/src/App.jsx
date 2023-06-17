@@ -62,14 +62,12 @@ function App() {
                     <SyntaxHighlighter language="jsx" style={oneDark}>
                       {
                         `const Resource = () => {
-  const [character, { fetchResource }] = useResource("https://anapioficeandfire.com/api/characters/583")
-
-  useEffect(() => {
-    fetchResource()
-  }, [fetchResource])
+  const [character, { containerRef }] = useResource("/characters/583")
 
   return (
-    <Character character={character} />
+    <div className="p-4 bg-gray-200 rounded-lg" ref={containerRef}>
+      <Character character={character} className="grow" />
+    </div>
   )
 }`
                       }
@@ -93,14 +91,10 @@ function App() {
                     <SyntaxHighlighter language="jsx" style={oneDark}>
                       {
                         `const Collection = () => {
-  const [characters, { fetchCollection }] = useCollection("https://anapioficeandfire.com/api/characters?culture=Northmen&pageSize=4")
-
-  useEffect(() => {
-    fetchCollection()
-  }, [fetchCollection])
+  const [characters, { containerRef }] = useCollection("/characters?culture=Northmen&pageSize=4")
 
   return (
-    <div className="p-4 bg-gray-200 rounded-lg text-gray-800 flex flex-col gap-4">
+    <div className="p-4 bg-gray-200 rounded-lg text-gray-800 flex flex-col gap-4" ref={containerRef}>
       {
         characters && characters.map(character => {
           return (
