@@ -1,6 +1,6 @@
 {
   "name": "@spellbook-technology/use-resource",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A React Hook to interact with RESTful APIs",
   "main": "index.jsx",
   "repository": {
